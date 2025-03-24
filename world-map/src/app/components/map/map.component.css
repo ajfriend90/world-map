@@ -1,0 +1,19 @@
+.map-layout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .map-column {
+    flex: 1;
+    overflow: auto;
+    background-color: #0D0208;
+  }
+  
+  .side-panel-column {
+    width: 30em;
+    background-color: #111;
+    color: #00FF41;
+    overflow-y: auto;
+    border-left: 1px solid #00FF41;
+  }
