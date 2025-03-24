@@ -1,0 +1,36 @@
+.zoom-controls {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background-color: #0D0208;
+    border: 1px solid #00FF41;
+    padding: 0.4rem 0.7rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #00FF41;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+  
+.zoom-controls button {
+    background-color: #001f00;
+    color: #00FF41;
+    border: 1px solid #00FF41;
+    padding: 0.2em 0.6em;
+    font-size: 1rem;
+    margin: 0 0.3em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+  
+.zoom-controls button:hover {
+    background-color: #002a00;
+}
+  
+.zoom-controls span {
+    color: #00FF41;
+    font-size: 1.2em;
+}

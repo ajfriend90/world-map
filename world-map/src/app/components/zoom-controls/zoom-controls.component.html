@@ -1,1 +1,5 @@
-<p>zoom-controls works!</p>
+<div class="zoom-controls">
+    <button (click)="zoomOut()" [disabled]="zoomValue <= 100">−</button>
+    <span>{{ zoomValue }}%</span>
+    <button (click)="zoomIn()" [disabled]="zoomValue >= 500">+</button>
+</div>
