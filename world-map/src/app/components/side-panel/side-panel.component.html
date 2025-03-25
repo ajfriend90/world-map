@@ -1,1 +1,15 @@
-<p>side-panel works!</p>
+<div *ngIf="country; else noCountry" class="panel-content">
+    <h2>{{ country.name }} ({{ country.iso2Code }})</h2>
+    <p><strong>Capital:</strong> {{ country.capitalCity }}</p>
+    <p><strong>Region:</strong> {{ country.region.value }}</p>
+    <p><strong>Admin Region:</strong> {{ country.adminregion.value }}</p>
+    <p><strong>Income Level:</strong> {{ country.incomeLevel.value }}</p>
+    <p><strong>Lending Type:</strong> {{ country.lendingType.value }}</p>
+    <p><strong>Coordinates:</strong> {{ country.latitude }}, {{ country.longitude }}</p>
+</div>
+  
+<ng-template #noCountry>
+    <div class="panel-content">
+        <p>Select a country to view details.</p>
+    </div>
+</ng-template>
