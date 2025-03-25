@@ -1,27 +1,50 @@
-.map-layout {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-}
-  
 .map-column {
     flex: 1;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
     position: relative;
     background-color: #0D0208;
-    padding: 1em;
+    padding: 0;
 }
 
 .map-column.zoomed {
     overflow: auto;
 }
 
+.map-column::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+  
+.map-column::-webkit-scrollbar-track {
+    background: #0D0208;
+}
+  
+.map-column::-webkit-scrollbar-thumb {
+    background-color: #00FF41;
+    border-radius: 10px;
+    border: 2px solid #0D0208;
+}
+  
+.map-column {
+    scrollbar-color: #00FF41 #0D0208;
+    scrollbar-width: thin;
+}
+
+.map-layout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: visible;
+}
+
 .map-wrapper {
-    transition: width 0.3s ease, height 0.3s ease;
+    transition: all 0.3s ease;
+    width: fit-content;
+    height: fit-content;
     min-width: 100%;
     min-height: 100%;
+    position: relative;
 }
   
 .side-panel-column {
